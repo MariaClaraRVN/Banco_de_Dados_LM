@@ -1,0 +1,124 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda a altura da tela */
+    flex-direction: column; /* Alinha conteúdo verticalmente */
+}
+
+/* Título */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+.cadastro-form {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s; /* Animação de entrada */
+}
+
+/* Formulário */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s; /* Animação de entrada */
+}
+
+
+/* Estilo dos inputs */
+input[type="text"], input[type="date"] {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+
+/* Botões */
+button {
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+button:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Tabela */
+table {
+    width: 80%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+.voltar, .consultar{
+    background-color: #001aff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.voltar:hover, .colsultar:hover{
+    background-color: #000296;
+}
+
+.excluir{
+    background-color: #ff0101;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.excluir:hover{
+    background-color: #580000;
+}
+
+a{
+    text-decoration: none;
+}

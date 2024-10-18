@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Equipamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Adicionar Equipamento</h1>
+    <form class="cadastro-form" method="POST" action="/add">
+        <label for="nome">Nome:</label>
+        <input class="cadatro-input" type="text" id="nome" name="nome" required><br><br>
+
+        <label for="tipo">Tipo:</label>
+        <input class="cadatro-input" type="text" id="tipo" name="tipo" required><br><br>
+
+        <label for="fabricante">Fabricante:</label>
+        <input class="cadatro-input" type="text" id="fabricante" name="fabricante" required><br><br>
+
+        <label for="data_aquisicao">Data de Aquisição:</label>
+        <input class="cadatro-input" type="date" id="data_aquisicao" name="data_aquisicao" required><br><br>
+
+        <label for="status_manutencao">Status de Manutenção:</label>
+        <input class="cadatro-input" type="text" id="status_manutencao" name="status_manutencao" required><br><br>
+
+        <button type="submit">Salvar</button>
+    </form>
+
+    <br>
+    <a class="consultar" href="/consulta">Consultar Equipamentos</a>
+</body>
+</html>

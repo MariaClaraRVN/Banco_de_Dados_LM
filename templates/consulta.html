@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Equipamentos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Lista de Equipamentos</h1>
+    <table border="1">
+        <tr>
+            <th>Nome</th>
+            <th>Tipo</th>
+            <th>Fabricante</th>
+            <th>Data de Aquisição</th>
+            <th>Status de Manutenção</th>
+            <th>Ações</th>  <!-- Nova coluna para ações -->
+        </tr>
+        {% for equipamento in equipamentos %}
+        <tr>
+            <td>{{ equipamento[1] }}</td>
+            <td>{{ equipamento[2] }}</td>
+            <td>{{ equipamento[3] }}</td>
+            <td>{{ equipamento[4] }}</td>
+            <td>{{ equipamento[5] }}</td>
+            <td>
+                <form method="POST" action="{{ url_for('delete', id=equipamento[0]) }}">
+                    <button class="excluir" type="submit">Excluir</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <a class="voltar" href="/">Voltar ao Cadastro</a>
+</body>
+</html>
